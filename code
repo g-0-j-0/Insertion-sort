@@ -1,0 +1,10 @@
+def insertion(saturo):
+    length=range(1,len(saturo))
+    for i in length:
+        to_sort=saturo[i]
+        while saturo[i-1]>to_sort and i>0:
+            saturo[i],saturo[i-1]=saturo[i-1],saturo[i]
+            i=i-1
+    return saturo
+
+print(insertion([3,5,6,4,3,3,7,3,5,8,5,32,1]))
